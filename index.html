@@ -1,9 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Hello</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Adobe AI Efficiency Dashboard</title>
+<style>
+  html, body, #root { margin:0; padding:0; background:#0b0f1a; min-height:100vh; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color:#fff; }
+</style>
+<!-- React & Charts CDN -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/recharts@2.12.7/umd/Recharts.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-  <h1>Hello World</h1>
+<div id="root"></div>
+
+<script>
+// === Injected Data ===
+window.__DATA__ = [
+  {"project":"Shell B2B Commerce","solution":"Commerce","region":"EMEA","quarter":"Q1 2025","phase":"Discovery & Design","activity":"Discovery Questionnaire creation","pm":"Sowmya Mathews","baseHr":15,"curHr":10,"baseFreq":1,"curFreq":1,"quality":3,"notes":"AI drafted questionnaire in 1 day","tool":""},
+  {"project":"Shell B2B Commerce","solution":"Commerce","region":"EMEA","quarter":"Q1 2025","phase":"Discovery & Design","activity":"Standardised user story generation (AC + edge cases)","pm":"Sowmya Mathews","baseHr":4,"curHr":2,"baseFreq":10,"curFreq":10,"quality":3,"notes":"GPT-4 generated AC + edge cases","tool":""},
+  {"project":"Shell B2B Commerce","solution":"Commerce","region":"EMEA","quarter":"Q1 2025","phase":"Discovery & Design","activity":"BRD creation","pm":"Sowmya Mathews","baseHr":40,"curHr":20,"baseFreq":1,"curFreq":1,"quality":4,"notes":"AI structured outline","tool":""}
+];
+window.__COST_RATE__ = 95;
+window.__GENERATED_AT__ = "2026-05-07";
+</script>
+
+<script type="text/babel">
+
+const { useState, useMemo } = React;
+const { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } = Recharts;
+
+function App() {
+  const COST_RATE = window.__COST_RATE__;
+  const RAW = window.__DATA__.map(d => {
+    const saved = Math.max(0,(d.baseHr*d.baseFreq)-(d.curHr*d.curFreq));
+    const pct = d.baseHr*d.baseFreq > 0 ? (saved/(d.baseHr*d.baseFreq))*100 : 0;
+    const cost = saved*COST_RATE;
+    return {...d,saved,pct,cost};
+  });
+
+  const totalSaved = RAW.reduce((s,r)=>s+r.saved,0);
+  const avgPct = RAW.length ? RAW.reduce((s,r)=>s+r.pct,0)/RAW.length : 0;
+
+  return (
+    <div style={{padding:"20px"}}>
+      <h1>Adobe AI Efficiency Dashboard</h1>
+      <p>Records: {RAW.length} | Hours Saved: {Math.round(totalSaved)} | Avg Efficiency: {avgPct.toFixed(1)}%</p>
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart data={RAW}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="activity" />
+          <YAxis />
+          <Tooltip />
+          <Bar dataKey="saved" fill="#FF4B00" />
+        </BarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
 </body>
 </html>
