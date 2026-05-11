@@ -3,9 +3,313 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hello World</title>
+<title>Fresca Coffee</title>
+<style>
+  :root {
+    --cream: #f5ecd9;
+    --espresso: #2a1810;
+    --mocha: #6b3410;
+    --gold: #c9a961;
+    --shadow: rgba(42, 24, 16, 0.15);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--cream);
+    color: var(--espresso);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  header {
+    background: var(--espresso);
+    color: var(--cream);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--gold);
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+  }
+  .logo span { color: var(--gold); }
+  nav a {
+    color: var(--cream);
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .hero {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-image {
+    background: linear-gradient(135deg, var(--mocha), var(--espresso));
+    aspect-ratio: 1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    box-shadow: 0 20px 60px var(--shadow);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--espresso);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .product-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--mocha);
+  }
+  .price-box {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .price-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--mocha);
+    margin-bottom: 0.5rem;
+  }
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .cta {
+    background: var(--espresso);
+    color: var(--cream);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .menu-section {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--espresso);
+    text-align: center;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .menu-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  .menu-card-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--gold), var(--mocha));
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+  .menu-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .menu-card p {
+    color: var(--mocha);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .menu-card .item-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .about-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 3rem 4rem;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--mocha);
+  }
+  .about-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+  /* Skeleton shimmer placeholders */
+  .skel {
+    background: linear-gradient(90deg, #ece3d0 0%, #f5ecd9 50%, #ece3d0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.2s infinite;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .skel-line  { height: 1.1rem; width: 100%; margin: 0.3rem 0; }
+  .skel-title { height: 3rem; width: 70%; }
+  .skel-badge { height: 1.5rem; width: 110px; border-radius: 20px; }
+  .skel-price { height: 2.5rem; width: 130px; }
+  .skel-card-title { height: 1.4rem; width: 60%; margin-bottom: 0.5rem; }
+  @keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  footer {
+    background: var(--espresso);
+    color: var(--cream);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+  }
+</style>
 </head>
 <body>
-<h1>Hello World</h1>
+
+<header>
+  <div class="logo">FRES<span>CA</span></div>
+  <nav>
+    <a href="#">Menu</a>
+    <a href="#">Locations</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<!--
+  Everything below is rendered by JavaScript after page load.
+  The initial HTML deliberately contains almost nothing for an AI crawler.
+-->
+
+<section class="hero">
+  <div class="hero-image">☕</div>
+  <div id="product-root">
+    <span class="skel skel-badge"></span>
+    <div style="margin-top: 1rem;"><span class="skel skel-title"></span></div>
+    <div style="margin-top: 1rem;">
+      <span class="skel skel-line"></span>
+      <span class="skel skel-line"></span>
+      <span class="skel skel-line" style="width: 80%;"></span>
+    </div>
+    <div class="price-box" style="margin-top: 2rem;">
+      <div class="price-label">Loading…</div>
+      <span class="skel skel-price"></span>
+    </div>
+  </div>
+</section>
+
+<section class="menu-section">
+  <h2 id="menu-title" class="section-title"><span class="skel" style="height:2rem;width:280px;"></span></h2>
+  <div id="menu-root" class="menu-grid">
+    <div class="menu-card">
+      <div class="menu-card-image">⏳</div>
+      <span class="skel skel-card-title"></span>
+      <span class="skel skel-line"></span>
+      <span class="skel skel-line" style="width: 70%;"></span>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-image">⏳</div>
+      <span class="skel skel-card-title"></span>
+      <span class="skel skel-line"></span>
+      <span class="skel skel-line" style="width: 70%;"></span>
+    </div>
+    <div class="menu-card">
+      <div class="menu-card-image">⏳</div>
+      <span class="skel skel-card-title"></span>
+      <span class="skel skel-line"></span>
+      <span class="skel skel-line" style="width: 70%;"></span>
+    </div>
+  </div>
+</section>
+
+<section class="about-section">
+  <h2>The Fresca Story</h2>
+  <p>From bean to brew — discover how Fresca brings bold flavor to your cup.</p>
+</section>
+
+<footer>
+  © Fresca Coffee Co.
+</footer>
+
+<script>
+  // Simulates a real-world JS-heavy site: content comes from API calls
+  // and is injected into the DOM after the page loads.
+  // To an LLM crawler that doesn't execute JS, this page is nearly empty.
+
+  // Product + menu data is base64-encoded — the same pattern as a JS bundle
+  // that fetches from an API. None of the content appears as readable text
+  // in the page source. To an LLM crawler that doesn't run JS, the page is empty.
+  const PAYLOAD = "eyJwcm9kdWN0Ijp7ImJhZGdlIjoi4piFIEJlc3RzZWxsZXIiLCJuYW1lIjoiVGhlIFNpZ25hdHVyZSBNb2NoYSIsImRlc2NyaXB0aW9uIjoiT3VyIG1vc3QtbG92ZWQgZHJpbmsuIFNpbmdsZS1vcmlnaW4gRXRoaW9waWFuIGVzcHJlc3NvLCBoYW5kLXN0aXJyZWQgd2l0aCBCZWxnaWFuIGRhcmsgY2hvY29sYXRlIGFuZCBzdGVhbWVkIHdob2xlIG1pbGssIHRvcHBlZCB3aXRoIHJpY2ggY29jb2EgZHVzdC4gQXZhaWxhYmxlIGhvdCBvciBpY2VkLiIsInByaWNlIjo2LjV9LCJtZW51VGl0bGUiOiJGZWF0dXJlZCBEcmlua3MiLCJtZW51IjpbeyJpY29uIjoi8J+NgyIsIm5hbWUiOiJQdW1wa2luIFNwaWNlIExhdHRlIiwiZGVzYyI6IkNvenkgdXAgd2l0aCBhIGhvbWVtYWRlIFB1bXBraW4gU3BpY2UgTGF0dGUgYnJld2VkIGZyb20gRnJlc2NhJ3Mgc21vb3RoIE1lZGl1bSBSb2FzdC4gRmFsbCBpbiBhIGN1cC4iLCJwcmljZSI6IiQ1Ljc1In0seyJpY29uIjoi8J+ngiIsIm5hbWUiOiJDbGFzc2ljIENvbGQgQnJldyIsImRlc2MiOiJDaGlsbCBvdXQgd2l0aCBGcmVzY2EncyBib2xkIERhcmsgUm9hc3QgaW4gdGhpcyBlYXN5IENvbGQgQnJldyByZWNpcGUuIENvb2wsIHNtb290aCwgYW5kIG1hZGUgZm9yIHN1bm55IGRheXMuIiwicHJpY2UiOiIkNS4yNSJ9LHsiaWNvbiI6IvCfjasiLCJuYW1lIjoiTW9jaGEgRGVsaWdodCIsImRlc2MiOiJUcmVhdCB5b3Vyc2VsZiB0byBhIGNob2NvbGF0ZXkgTW9jaGEgRGVsaWdodCBtYWRlIHdpdGggRnJlc2NhJ3MgcmljaCBNZWRpdW0gUm9hc3QuIFN3ZWV0IGFuZCBzaXBwYWJsZS4iLCJwcmljZSI6IiQ2LjUwIn1dfQ==";
+
+  function fakeFetch() {
+    // Pretend this is a real network call: fetch('/api/storefront')
+    return new Promise(resolve => {
+      setTimeout(() => resolve(JSON.parse(atob(PAYLOAD))), 400);
+    });
+  }
+
+  fakeFetch().then(data => {
+    const formatted = new Intl.NumberFormat('en-US', {
+      style: 'currency', currency: 'USD'
+    }).format(data.product.price);
+
+    document.getElementById('product-root').innerHTML = `
+      <span class="badge">${data.product.badge}</span>
+      <h1 class="product-title">${data.product.name}</h1>
+      <p class="description">${data.product.description}</p>
+      <div class="price-box">
+        <div class="price-label">Bestselling Mocha — Price</div>
+        <div class="price">${formatted}</div>
+      </div>
+      <button class="cta">Order Now</button>
+    `;
+
+    document.getElementById('menu-title').textContent = data.menuTitle;
+    document.getElementById('menu-root').innerHTML = data.menu.map(item => `
+      <div class="menu-card">
+        <div class="menu-card-image">${item.icon}</div>
+        <h3>${item.name}</h3>
+        <p>${item.desc}</p>
+        <div class="item-price">${item.price}</div>
+      </div>
+    `).join('');
+  });
+</script>
+
 </body>
 </html>
