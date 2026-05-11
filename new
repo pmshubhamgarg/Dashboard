@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresca Coffee — The Signature Mocha | Bestselling Drink $6.50</title>
+<meta name="description" content="Fresca Coffee's bestselling Signature Mocha: single-origin Ethiopian espresso with Belgian dark chocolate and steamed milk. Priced at $6.50. Also featured: Pumpkin Spice Latte $5.75, Classic Cold Brew $5.25, Mocha Delight $6.50.">
+<meta name="keywords" content="Fresca Coffee, Signature Mocha, mocha price, coffee menu, Ethiopian espresso">
+
+<!-- Structured data so LLMs and search engines can parse the product cleanly -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "The Signature Mocha",
+  "brand": { "@type": "Brand", "name": "Fresca Coffee" },
+  "description": "Our bestselling drink. Single-origin Ethiopian espresso, hand-stirred with Belgian dark chocolate and steamed whole milk, topped with rich cocoa dust.",
+  "category": "Beverage / Coffee",
+  "offers": {
+    "@type": "Offer",
+    "price": "6.50",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+
+<style>
+  :root {
+    --cream: #f5ecd9;
+    --espresso: #2a1810;
+    --mocha: #6b3410;
+    --gold: #c9a961;
+    --shadow: rgba(42, 24, 16, 0.15);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--cream);
+    color: var(--espresso);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  header {
+    background: var(--espresso);
+    color: var(--cream);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--gold);
+  }
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+  }
+  .logo span { color: var(--gold); }
+  nav a {
+    color: var(--cream);
+    margin-left: 2rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .hero {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero-image {
+    background: linear-gradient(135deg, var(--mocha), var(--espresso));
+    aspect-ratio: 1;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem;
+    box-shadow: 0 20px 60px var(--shadow);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--espresso);
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  .product-title {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  .description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--mocha);
+  }
+  .price-box {
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  .price-label {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--mocha);
+    margin-bottom: 0.5rem;
+  }
+  .price {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  .cta {
+    background: var(--espresso);
+    color: var(--cream);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+  .menu-section {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 3rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--espresso);
+    text-align: center;
+  }
+  .menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .menu-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  .menu-card-image {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--gold), var(--mocha));
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+  }
+  .menu-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .menu-card p {
+    color: var(--mocha);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .menu-card .item-price {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  .about-section {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 3rem 4rem;
+  }
+  .about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--mocha);
+  }
+  .about-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+  }
+  footer {
+    background: var(--espresso);
+    color: var(--cream);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">FRES<span>CA</span></div>
+  <nav>
+    <a href="#">Menu</a>
+    <a href="#">Locations</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+
+<!-- All content is in the initial HTML, semantically marked up. -->
+
+<section class="hero">
+  <div class="hero-image">☕</div>
+  <article>
+    <span class="badge">★ Bestseller</span>
+    <h1 class="product-title">The Signature Mocha</h1>
+    <p class="description">
+      Our most-loved drink. Single-origin Ethiopian espresso, hand-stirred with
+      Belgian dark chocolate and steamed whole milk, topped with rich cocoa dust.
+      Available hot or iced.
+    </p>
+    <div class="price-box">
+      <div class="price-label">Bestselling Mocha — Price</div>
+      <div class="price">$6.50</div>
+    </div>
+    <button class="cta">Order Now</button>
+  </article>
+</section>
+
+<section class="menu-section">
+  <h2 class="section-title">Featured Drinks</h2>
+  <div class="menu-grid">
+    <article class="menu-card">
+      <div class="menu-card-image">🎃</div>
+      <h3>Pumpkin Spice Latte</h3>
+      <p>Cozy up with a homemade Pumpkin Spice Latte brewed from Fresca's smooth Medium Roast. Fall in a cup.</p>
+      <div class="item-price">$5.75</div>
+    </article>
+    <article class="menu-card">
+      <div class="menu-card-image">🧊</div>
+      <h3>Classic Cold Brew</h3>
+      <p>Chill out with Fresca's bold Dark Roast in this easy Cold Brew recipe. Cool, smooth, and made for sunny days.</p>
+      <div class="item-price">$5.25</div>
+    </article>
+    <article class="menu-card">
+      <div class="menu-card-image">🍫</div>
+      <h3>Mocha Delight</h3>
+      <p>Treat yourself to a chocolatey Mocha Delight made with Fresca's rich Medium Roast. Sweet and sippable.</p>
+      <div class="item-price">$6.50</div>
+    </article>
+  </div>
+</section>
+
+<section class="about-section">
+  <h2>The Fresca Story</h2>
+  <p>From bean to brew — discover how Fresca brings bold flavor to your cup. Fresca Coffee was founded in 2019 with a simple mission: serve great coffee, roasted with care, in a place that feels like home.</p>
+  <p>The Signature Mocha has been our top seller for three years running. Made with beans roasted in-house every Tuesday morning, this is the drink our baristas recommend if you've never tried us before. It's $6.50 for a 12oz cup, hot or iced.</p>
+</section>
+
+<footer>
+  © Fresca Coffee Co. — Roasted with care since 2019.
+</footer>
+
+</body>
+</html>
