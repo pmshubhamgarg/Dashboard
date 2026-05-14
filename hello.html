@@ -1,273 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fresca Coffee — The Signature Mocha | Bestselling Drink $6.50</title>
-<meta name="description" content="Fresca Coffee's bestselling Signature Mocha: single-origin Ethiopian espresso with Belgian dark chocolate and steamed milk. Priced at $6.50. Also featured: Pumpkin Spice Latte $5.75, Classic Cold Brew $5.25, Mocha Delight $6.50.">
-<meta name="keywords" content="Fresca Coffee, Signature Mocha, mocha price, coffee menu, Ethiopian espresso">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresca Coffee — Signature Mocha, Dairy-Free Options & FAQs | Menu & Prices</title>
+  <meta name="description" content="Fresca Coffee menu: Signature Mocha $6.50, Pumpkin Spice Latte $5.75, Classic Cold Brew $5.25, Mocha Delight $6.50. Dairy-free options (oat, almond, soy milk) at no extra charge. Fair Trade certified. Monthly subscription $24.99. Founded 2019.">
+  <meta name="keywords" content="Fresca Coffee, Signature Mocha, dairy-free coffee, vegan coffee, oat milk coffee, fair trade coffee, coffee subscription, Ethiopian espresso, coffee menu prices">
 
-<!-- Structured data so LLMs and search engines can parse the product cleanly -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "The Signature Mocha",
-  "brand": { "@type": "Brand", "name": "Fresca Coffee" },
-  "description": "Our bestselling drink. Single-origin Ethiopian espresso, hand-stirred with Belgian dark chocolate and steamed whole milk, topped with rich cocoa dust.",
-  "category": "Beverage / Coffee",
-  "offers": {
-    "@type": "Offer",
-    "price": "6.50",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
+  <!-- LLMO-style schema markup: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Fresca Coffee",
+    "description": "Independent specialty coffee shop founded in 2019, serving handcrafted drinks with single-origin beans roasted in-house every Tuesday. Famous for the Signature Mocha. Offers dairy-free options and a monthly subscription service.",
+    "foundingDate": "2019",
+    "servesCuisine": "Coffee",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 06:30-20:00, Sa-Su 07:00-20:00",
+    "hasMenu": {
+      "@type": "Menu",
+      "hasMenuSection": {
+        "@type": "MenuSection",
+        "name": "Featured Drinks",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Signature Mocha",
+            "description": "Bestselling drink. Single-origin Ethiopian espresso, Belgian dark chocolate, steamed whole milk, cocoa dust. Available hot or iced. 12oz.",
+            "offers": { "@type": "Offer", "price": "6.50", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Pumpkin Spice Latte",
+            "description": "Smooth Medium Roast with seasonal pumpkin spice.",
+            "offers": { "@type": "Offer", "price": "5.75", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Classic Cold Brew",
+            "description": "Bold Dark Roast, slow-steeped. Naturally dairy-free when ordered black.",
+            "offers": { "@type": "Offer", "price": "5.25", "priceCurrency": "USD" }
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Mocha Delight",
+            "description": "Rich Medium Roast with chocolate.",
+            "offers": { "@type": "Offer", "price": "6.50", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    }
   }
-}
-</script>
+  </script>
 
-<style>
-  :root {
-    --cream: #f5ecd9;
-    --espresso: #2a1810;
-    --mocha: #6b3410;
-    --gold: #c9a961;
-    --shadow: rgba(42, 24, 16, 0.15);
+  <!-- LLMO-style schema markup: FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does Fresca Coffee have dairy-free or vegan options?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every Fresca drink can be made dairy-free with oat milk, almond milk, or soy milk at no extra charge. The Classic Cold Brew is naturally vegan when ordered black. The Signature Mocha can be made fully vegan by substituting oat milk and confirming the dark chocolate sauce (Fresca's house chocolate is dairy-free certified)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Fresca Coffee's bestselling drink?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Signature Mocha is Fresca Coffee's bestselling drink, ranked #1 for three consecutive years. It is made with single-origin Ethiopian espresso, Belgian dark chocolate, and steamed milk, topped with cocoa dust. Price: $6.50 for a 12oz cup, available hot or iced."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Fresca Coffee Fair Trade certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Fresca Coffee sources 100% of its beans from Fair Trade Certified cooperatives in Ethiopia, Colombia, and Guatemala. Every bag and every cup supports farmer cooperatives directly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Fresca Coffee offer a subscription?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Fresca Coffee's monthly subscription delivers 12oz of freshly-roasted whole beans for $24.99 per month with free shipping in the continental US. Choose light, medium, or dark roast. Subscribers also receive 15% off all in-store drinks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When does Fresca Coffee roast their beans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fresca Coffee roasts beans in-house every Tuesday morning. Subscription orders ship within 48 hours of roasting to guarantee freshness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Fresca Coffee's opening hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Fresca Coffee locations open at 6:30 AM on weekdays and 7:00 AM on weekends. All locations close at 8:00 PM daily."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I order Fresca Coffee ahead of time?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Order through the Fresca Coffee mobile app for in-store pickup or curbside delivery within 15 minutes of ordering. Mobile orders earn double loyalty points."
+        }
+      }
+    ]
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Georgia', serif;
-    background: var(--cream);
-    color: var(--espresso);
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-  header {
-    background: var(--espresso);
-    color: var(--cream);
-    padding: 1.5rem 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid var(--gold);
-  }
-  .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-  }
-  .logo span { color: var(--gold); }
-  nav a {
-    color: var(--cream);
-    margin-left: 2rem;
-    text-decoration: none;
-    font-size: 0.95rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  .hero {
-    max-width: 1100px;
-    margin: 4rem auto;
-    padding: 0 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-  }
-  .hero-image {
-    background: linear-gradient(135deg, var(--mocha), var(--espresso));
-    aspect-ratio: 1;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 8rem;
-    box-shadow: 0 20px 60px var(--shadow);
-  }
-  .badge {
-    display: inline-block;
-    background: var(--gold);
-    color: var(--espresso);
-    padding: 0.4rem 1rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-  .product-title {
-    font-size: 3rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-  }
-  .description {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    color: var(--mocha);
-  }
-  .price-box {
-    background: white;
-    padding: 1.5rem 2rem;
-    border-radius: 8px;
-    border-left: 4px solid var(--gold);
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  }
-  .price-label {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--mocha);
-    margin-bottom: 0.5rem;
-  }
-  .price {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  .cta {
-    background: var(--espresso);
-    color: var(--cream);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-size: 1rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 4px;
-    font-family: inherit;
-  }
-  .menu-section {
-    max-width: 1100px;
-    margin: 4rem auto;
-    padding: 0 3rem;
-  }
-  .section-title {
-    font-size: 2.2rem;
-    margin-bottom: 2rem;
-    color: var(--espresso);
-    text-align: center;
-  }
-  .menu-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-  .menu-card {
-    background: white;
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 20px var(--shadow);
-  }
-  .menu-card-image {
-    aspect-ratio: 1;
-    background: linear-gradient(135deg, var(--gold), var(--mocha));
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-  }
-  .menu-card h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  .menu-card p {
-    color: var(--mocha);
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-  }
-  .menu-card .item-price {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  .about-section {
-    max-width: 900px;
-    margin: 4rem auto;
-    padding: 0 3rem 4rem;
-  }
-  .about-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--mocha);
-  }
-  .about-section p {
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
-  }
-  footer {
-    background: var(--espresso);
-    color: var(--cream);
-    text-align: center;
-    padding: 2rem;
-    font-size: 0.9rem;
-  }
-</style>
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #2a1810; background: #fdf8f3; }
+    header { background: #4a2c1a; color: #fdf8f3; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.5rem; font-weight: 700; letter-spacing: 0.1em; }
+    nav a { color: #fdf8f3; text-decoration: none; margin-left: 1.5rem; }
+    main { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    .hero { text-align: center; padding: 3rem 1rem; background: #fff; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .bestseller-badge { display: inline-block; background: #d97706; color: white; padding: 0.3rem 0.8rem; border-radius: 999px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; margin-bottom: 1rem; color: #4a2c1a; }
+    .price { font-size: 2rem; color: #d97706; font-weight: 700; margin: 1rem 0; }
+    .order-btn { display: inline-block; background: #d97706; color: white; padding: 0.8rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
+    h2 { font-size: 1.8rem; margin: 2rem 0 1rem; color: #4a2c1a; }
+    h3 { font-size: 1.2rem; margin: 1rem 0 0.5rem; color: #4a2c1a; }
+    .drinks { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
+    .drink-card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .drink-icon { font-size: 2.5rem; }
+    .drink-price { color: #d97706; font-weight: 700; font-size: 1.2rem; margin-top: 0.5rem; }
+    section { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .faq-item { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid #f0e6db; }
+    .faq-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .summary-box { background: #fef3e7; border-left: 4px solid #d97706; padding: 1.2rem; border-radius: 6px; margin-bottom: 1.5rem; }
+    .summary-box strong { color: #4a2c1a; }
+    footer { text-align: center; padding: 2rem; color: #8a7a6a; }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="logo">FRESCA</div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#faq">FAQ</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">FRES<span>CA</span></div>
-  <nav>
-    <a href="#">Menu</a>
-    <a href="#">Locations</a>
-    <a href="#">About</a>
-  </nav>
-</header>
+  <main>
 
-<!-- All content is in the initial HTML, semantically marked up. -->
-
-<section class="hero">
-  <div class="hero-image">☕</div>
-  <article>
-    <span class="badge">★ Bestseller</span>
-    <h1 class="product-title">The Signature Mocha</h1>
-    <p class="description">
-      Our most-loved drink. Single-origin Ethiopian espresso, hand-stirred with
-      Belgian dark chocolate and steamed whole milk, topped with rich cocoa dust.
-      Available hot or iced.
-    </p>
-    <div class="price-box">
-      <div class="price-label">Bestselling Mocha — Price</div>
-      <div class="price">$6.50</div>
+    <!-- LLMO-style summary box: page-level abstract for AI consumption -->
+    <div class="summary-box">
+      <strong>About this page:</strong> Fresca Coffee is an independent specialty coffee shop founded in 2019. This page lists the full drinks menu with prices, dietary information including dairy-free and vegan options, subscription details, and frequently asked questions. Bestseller: the Signature Mocha ($6.50). All drinks available with oat, almond, or soy milk at no extra charge. Fair Trade certified. Monthly subscription available for $24.99 with free shipping.
     </div>
-    <button class="cta">Order Now</button>
-  </article>
-</section>
 
-<section class="menu-section">
-  <h2 class="section-title">Featured Drinks</h2>
-  <div class="menu-grid">
-    <article class="menu-card">
-      <div class="menu-card-image">🎃</div>
-      <h3>Pumpkin Spice Latte</h3>
-      <p>Cozy up with a homemade Pumpkin Spice Latte brewed from Fresca's smooth Medium Roast. Fall in a cup.</p>
-      <div class="item-price">$5.75</div>
-    </article>
-    <article class="menu-card">
-      <div class="menu-card-image">🧊</div>
-      <h3>Classic Cold Brew</h3>
-      <p>Chill out with Fresca's bold Dark Roast in this easy Cold Brew recipe. Cool, smooth, and made for sunny days.</p>
-      <div class="item-price">$5.25</div>
-    </article>
-    <article class="menu-card">
-      <div class="menu-card-image">🍫</div>
-      <h3>Mocha Delight</h3>
-      <p>Treat yourself to a chocolatey Mocha Delight made with Fresca's rich Medium Roast. Sweet and sippable.</p>
-      <div class="item-price">$6.50</div>
-    </article>
-  </div>
-</section>
+    <div class="hero">
+      <div class="bestseller-badge">★ Bestseller — 3 Years Running</div>
+      <h1>The Signature Mocha</h1>
+      <p style="max-width: 600px; margin: 1rem auto;">Single-origin Ethiopian espresso, hand-stirred with Belgian dark chocolate and steamed whole milk, topped with rich cocoa dust. Available hot or iced. 12oz cup. <strong>Vegan option available with oat milk.</strong></p>
+      <div class="price">$6.50</div>
+      <a href="#" class="order-btn">Order Now</a>
+    </div>
 
-<section class="about-section">
-  <h2>The Fresca Story</h2>
-  <p>From bean to brew — discover how Fresca brings bold flavor to your cup. Fresca Coffee was founded in 2019 with a simple mission: serve great coffee, roasted with care, in a place that feels like home.</p>
-  <p>The Signature Mocha has been our top seller for three years running. Made with beans roasted in-house every Tuesday morning, this is the drink our baristas recommend if you've never tried us before. It's $6.50 for a 12oz cup, hot or iced.</p>
-</section>
+    <section id="menu">
+      <h2>Featured Drinks</h2>
+      <div class="drinks">
+        <div class="drink-card">
+          <div class="drink-icon">🎃</div>
+          <h3>Pumpkin Spice Latte</h3>
+          <p>Cozy up with a homemade Pumpkin Spice Latte brewed from Fresca's smooth Medium Roast. Fall in a cup. Dairy-free with oat milk.</p>
+          <div class="drink-price">$5.75</div>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon">🧊</div>
+          <h3>Classic Cold Brew</h3>
+          <p>Chill out with Fresca's bold Dark Roast in this easy Cold Brew. Naturally vegan and dairy-free when ordered black.</p>
+          <div class="drink-price">$5.25</div>
+        </div>
+        <div class="drink-card">
+          <div class="drink-icon">🍫</div>
+          <h3>Mocha Delight</h3>
+          <p>Chocolatey Mocha Delight with Fresca's rich Medium Roast. Sweet and sippable. Vegan option with oat milk and our certified dairy-free dark chocolate.</p>
+          <div class="drink-price">$6.50</div>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  © Fresca Coffee Co. — Roasted with care since 2019.
-</footer>
+    <!-- LLMO-style FAQ section: matches real customer questions -->
+    <section id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Does Fresca Coffee have dairy-free or vegan options?</h3>
+        <p>Yes. Every Fresca drink can be made dairy-free with oat milk, almond milk, or soy milk at no extra charge. The Classic Cold Brew is naturally vegan when ordered black. The Signature Mocha can be made fully vegan by substituting oat milk — Fresca's house dark chocolate is certified dairy-free.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is Fresca Coffee's bestselling drink?</h3>
+        <p>The Signature Mocha is Fresca Coffee's bestselling drink, ranked #1 for three consecutive years. It is made with single-origin Ethiopian espresso, Belgian dark chocolate, and steamed milk, topped with cocoa dust. Price: $6.50 for a 12oz cup, available hot or iced.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is Fresca Coffee Fair Trade certified?</h3>
+        <p>Yes. Fresca Coffee sources 100% of its beans from Fair Trade Certified cooperatives in Ethiopia, Colombia, and Guatemala. Every bag and every cup supports farmer cooperatives directly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does Fresca Coffee offer a coffee subscription?</h3>
+        <p>Yes. Fresca's monthly subscription delivers 12oz of freshly-roasted whole beans for $24.99 per month with free shipping in the continental US. Choose light, medium, or dark roast. Subscribers also receive 15% off all in-store drinks.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>When does Fresca Coffee roast their beans?</h3>
+        <p>Fresca Coffee roasts beans in-house every Tuesday morning. Subscription orders ship within 48 hours of roasting to guarantee freshness.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What are Fresca Coffee's opening hours?</h3>
+        <p>Fresca Coffee locations open at 6:30 AM on weekdays and 7:00 AM on weekends. All locations close at 8:00 PM daily.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I order Fresca Coffee ahead of time?</h3>
+        <p>Yes. Order through the Fresca mobile app for in-store pickup or curbside delivery within 15 minutes. Mobile orders earn double loyalty points.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>The Fresca Story</h2>
+      <p>From bean to brew — Fresca Coffee was founded in 2019 with a simple mission: serve great coffee, roasted with care, in a place that feels like home. We source 100% Fair Trade certified beans from cooperatives in Ethiopia, Colombia, and Guatemala, and roast them in-house every Tuesday morning.</p>
+      <p style="margin-top: 1rem;">The Signature Mocha has been our top seller for three years running. Made with beans roasted in-house every Tuesday morning, this is the drink our baristas recommend if you've never tried us before. It's $6.50 for a 12oz cup, hot or iced — and yes, it can be made fully vegan.</p>
+    </section>
+
+  </main>
+
+  <footer>
+    © Fresca Coffee Co. — Roasted with care since 2019. Independent. Fair Trade. Vegan-friendly.
+  </footer>
 
 </body>
 </html>
